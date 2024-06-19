@@ -1,58 +1,70 @@
-# create-svelte
+# Untitled UI Icons for Svelte
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+The _**ultimate**_ icon library for Svelte 🧡✨ — Untitled UI Icons are a clean, consistent, and neutral icon library crafted specifically for modern UI design.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+> [!IMPORTANT]  
+> This is an unofficial port of [Untitled UI](https://www.untitledui.com) to Svelte, and is _not_ affiliated with them.
 
-## Creating a project
+👉 Want to see what's included? [**Browse all icons here!**](https://www.untitledui.com/free-icons)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```sh
+npm install @voolt/untitledui-svelte
 ```
+
+## Usage
+
+Untitled UI Icons is built with ES Modules, so it's completely tree-shakable.
+
+Each icon can be imported as a Svelte component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+
+### Examples
+
+Default usage:
+
+```svelte
+<script>
+	import { FaceWink } from "untitledui-svelte";
+</script>
+
+<FaceWink />
+```
+
+Additional props can be passed to adjust the icon:
+
+```svelte
+<script>
+	import { ThumbsUp } from "untitledui-svelte";
+</script>
+
+<ThumbsUp size={32} color="#ff3e98" />
+```
+
+Icon components are always in PascalCase. If you want to use `calendar-check-02`, you can import it as `CalendarCheck02`:
+
+```svelte
+<script>
+	import { CalendarCheck02 } from "untitledui-svelte";
+</script>
+
+<CalendarCheck02 />
+```
+
+## PRO Icons
+
+This library provides access to the free Untitled UI icons only. If you purchased Untitled UI PRO, you will need to fork this project, prepare the icons and publish a private library to utilize them within your projects, as we do not support them out of the box.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+If you want to update the icons from source, you can follow these steps:
 
-```bash
-npm run dev
+1. Clone the ".env.example" file to ".env" and fiil it with...
+   1. Your [Figma access token](https://www.figma.com/developers/api#access-tokens)
+   2. The ID for your copy of the Untitled UI [Figma file](https://store.untitledui.com/buy/icons-free)
+2. Run `npm run figma:export` to download the SVGs
+3. Run `npm run figma:prepare` to prepare the Svelte components
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## License
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+The untitledui-svelte library is distributed under the [MIT License](./LICENSE). While Untitled UI itself is distributed under a [proprietary license](https://www.untitledui.com/legal/license), we have received express permission from Jordan Hughes to distribute the untitledui-svelte library.
