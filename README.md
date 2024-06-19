@@ -25,7 +25,7 @@ Default usage:
 
 ```svelte
 <script>
-	import { FaceWink } from "untitledui-svelte";
+	import { FaceWink } from "@voolt_technologies/untitledui-svelte";
 </script>
 
 <FaceWink />
@@ -35,7 +35,7 @@ Additional props can be passed to adjust the icon:
 
 ```svelte
 <script>
-	import { ThumbsUp } from "untitledui-svelte";
+	import { ThumbsUp } from "@voolt_technologies/untitledui-svelte";
 </script>
 
 <ThumbsUp size={32} color="#ff3e98" />
@@ -45,7 +45,7 @@ Icon components are always in PascalCase. If you want to use `calendar-check-02`
 
 ```svelte
 <script>
-	import { CalendarCheck02 } from "untitledui-svelte";
+	import { CalendarCheck02 } from "@voolt_technologies/untitledui-svelte";
 </script>
 
 <CalendarCheck02 />
