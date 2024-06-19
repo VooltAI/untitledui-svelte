@@ -1,0 +1,25 @@
+<script>
+	/** @type {number} */
+	export let size = 24;
+	/** @type {string} */
+	export let color = "currentColor";
+	/** @type {number} */
+	export let strokeWidth = 2;
+</script>
+
+<svg
+	{...$$restProps}
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	fill="none"
+	viewBox="0 0 24 24"
+>
+	<path
+		stroke={color}
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		stroke-width={strokeWidth}
+		d="M2 12h10M9 4v16M3 9l3 3-3 3m9-9L9 9 6 6m0 12 3-3 1.5 1.5m9.5-1.965V4a2 2 0 1 0-4 0v10.535a4 4 0 1 0 4 0"
+	/>
+</svg>
